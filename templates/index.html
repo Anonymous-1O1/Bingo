@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo</title>
+    <link rel="stylesheet" href="../static/style.css"/>
+</head>
+<body>
+    <div class="bingo">
+        {%for i in range(4)%}
+            <div class="bingo_row">
+                {%for j in range(4)%}
+                    <input type="checkbox" class="input" name="check_{{i+1}}_{{j+1}}"  id="check_{{i+1}}_{{j+1}}" value="check_{{i+1}}_{{j+1}}">
+                    <label for="check_{{i+1}}_{{j+1}}" class="checkbox">{{options[j+4*i]}}</label>
+                {%endfor%}
+            </div>
+        {%endfor%}
+    </div>
+</body>
+</html>
